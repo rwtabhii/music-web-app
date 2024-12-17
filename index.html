@@ -1,0 +1,97 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/63d561dc95.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1>Music Player</h1>
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-button"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- leftside -->
+      <div class="all-songs">
+
+        <div class=filtersongs>
+          <p>filter the Songs :</p>
+          <div class=choose-songs>
+            <select id="selectId" style="
+      background-color: #ae9c9c;
+  ">
+              <option value="all">All</option>
+              <option value="rock">Rock</option>
+              <option value="pop">Pop</option>
+              <option value="hiphop">Hip Hop</option>
+            </select>
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search for a song...">
+            <button id="searchButton" class="search-button"
+              style="height: 1.5rem;background-color: #ea09ea;">Search</button>
+          </div>
+        </div>
+        <h3>All Songs:</h3>
+        <div class=show-songs></div>
+
+      </div>
+      <!-- middleside -->
+      <div class="card">
+        <div class="thumbnail">
+          <div class="song-photo"><img src="image/newone.webp" alt=""></div>
+          <div class=song-detail>
+            <h2>Welcome to the MusicPlayer</h2>
+            <h3>Select the Song from the list</h3>
+          </div>
+
+        </div>
+
+        <div class="music-bar">
+          <div class="controls">
+            <audio id="audioPlayer" controls>
+              <source id="audioSource" src="" type="audio/mp3">
+            </audio>
+          </div>
+        </div>
+        <div class="music-butons">
+          <div class="previous-song change-song"><i class="fa-solid fa-backward-step"></i></div>
+          <div class="next-song change-song"><i class="fa-solid fa-forward-step"></i></div>
+        </div>
+        <!-- playlistbuton -->
+        <div class="playlist-button">Add To Playlist</div>
+      </div>
+      <!-- rightside -->
+      <div class="playlist-container" style=" padding:1px;">
+        <div class="seach-playlist">
+          <input type="text" id="searchplaylist" class="search-bar" placeholder="Create playlist...">
+          <button id="create-button" class="create-playlist" style="background-color: #ff0cff; height: 2rem;">Create
+            Playlist</button>
+        </div>
+        <div class="playlist">
+          <div class="playlist-songs">
+            <h3>Current Playlist:</h3>
+            <div class="soloplaylist-songs">
+
+            </div>
+          </div>
+          <div class="allplaylist">
+            <h3>All Playlist:</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+  </html>
